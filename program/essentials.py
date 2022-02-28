@@ -25,7 +25,7 @@ from pyrogram import Client, filters, __version__ as pyrover
 from pytgcalls import (__version__ as pytgver)
 
 from program import __version__ as ver
-from program.start import __python_version__ as pyver
+#from program.start import __python_version__ as pyver
 
 from driver.core import me_bot
 from driver.filters import command
@@ -36,7 +36,8 @@ from driver.database.dbpunish import get_gbans_count
 from driver.database.dbqueue import get_active_chats
 
 from config import BOT_USERNAME as uname
-
+from config import OWNER_ID
+__python_version__ = f"ShadowMonarch@{OWNER_ID}"
 
 @Client.on_message(command(["broadcast", f"broadcast@{uname}"]) & ~filters.edited)
 @bot_creator
