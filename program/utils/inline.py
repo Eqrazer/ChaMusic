@@ -12,6 +12,12 @@ def stream_markup(user_id):
       InlineKeyboardButton(text="• Mᴇɴᴜ", callback_data=f'stream_menu_panel | {user_id}'),
       InlineKeyboardButton(text="• Cʟᴏsᴇ", callback_data=f'set_close'),
     ],
+            [
+                InlineKeyboardButton("• Gʀᴏᴜᴘ", url=f"https://t.me/AnimeFunChat"),
+                InlineKeyboardButton(
+                    "• Cʜᴀɴɴᴇʟ", url=f"https://t.me/AinCradNetwork"
+                ),
+            ],
   ]
   return buttons
 
