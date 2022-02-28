@@ -20,4 +20,4 @@ async def start_bot():
     
 #loop = asyncio.get_event_loop()
 #loop.run_until_complete(start_bot())
-asyncio.run(main())
+asyncio.run(start_bot())
