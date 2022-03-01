@@ -18,6 +18,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/licenses.html
 
 
 from config import BOT_USERNAME
+from config import IMG_4, IMG_5
 
 from pyrogram import Client
 from pyrogram.types import (
@@ -43,11 +44,13 @@ async def playlist(client, m: Message):
     if chat_id in QUEUE:
         chat_queue = get_queue(chat_id)
         if len(chat_queue) == 1:
-            await m.reply(
+            await m.reply_video(
+                IMG_4,
                 f"💡 **Currently Streaming**`:`\n\n"
                 f"➣ [{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}`",
                 reply_markup=keyboard, disable_web_page_preview=True)
         else:
+            IMG_4,
             QUE = f"💡 **Currently Streaming**`:`\n\n" \
                   f"➣ [{chat_queue[0][0]}]({chat_queue[0][2]}) | `{chat_queue[0][3]}` \n\n" \
                   f"**📖 Queue song list**`:`\n"
