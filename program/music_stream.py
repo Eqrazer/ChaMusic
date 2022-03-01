@@ -128,7 +128,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
             buttons = stream_markup(user_id)
             await suhu.delete()
             await m.reply_video(
-                photo=image,
+                IMG_5,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 caption=f"💡 **Track added to queue »** `{pos}`\n\n"
                         f"🗂 **Name:** [{songname}]({link}) | `music`\n"
@@ -161,7 +161,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
                     f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 )
                 await m.reply_video(
-                    photo=image,
+                    IMG_5,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=f"🗂 **Name:** [{songname}]({link}) | `music`\n"
                             f"⏱️ **Duration:** `{duration}`\n"
